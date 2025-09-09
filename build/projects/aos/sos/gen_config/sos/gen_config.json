@@ -1,0 +1,6 @@
+{
+    "SOS_NFS_DIR": "\"/export/odroid\"",
+    "SOS_GATEWAY": "\"192.168.168.1\"",
+    "SOS_FRAME_LIMIT": "0ul",
+    "SOS_GDB_ENABLED": true
+}

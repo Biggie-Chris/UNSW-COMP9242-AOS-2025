@@ -1,0 +1,2 @@
+LIB_PICOTCP: true # LibPicotcp=ON
+LIB_PICOTCP_BSD: true # LibPicotcpBsd=ON

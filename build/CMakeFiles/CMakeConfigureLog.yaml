@@ -1,0 +1,629 @@
+
+---
+events:
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/usr/share/cmake-3.28/Modules/CMakeDetermineSystem.cmake:228 (message)"
+      - "CMakeLists.txt:7 (project)"
+    message: |
+      The target system is: Generic -  - seL4CPU
+      The host system is: Linux - 6.11.0-29-generic - x86_64
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/usr/share/cmake-3.28/Modules/CMakeDetermineCompilerId.cmake:17 (message)"
+      - "/usr/share/cmake-3.28/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
+      - "/usr/share/cmake-3.28/Modules/CMakeDetermineCCompiler.cmake:123 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "tools/seL4/cmake-tool/base.cmake:16 (enable_language)"
+      - "tools/seL4/cmake-tool/all.cmake:13 (include)"
+      - "CMakeLists.txt:18 (include)"
+    message: |
+      Compiling the C compiler identification source file "CMakeCCompilerId.c" succeeded.
+      Compiler: /usr/bin/aarch64-linux-gnu-gcc 
+      Build flags: -DCONFIG_ARM_TLS_REG_TPIDRU=1
+      Id flags:  
+      
+      The output was:
+      0
+      
+      
+      Compilation of the C compiler identification source "CMakeCCompilerId.c" produced "a.out"
+      
+      The C compiler identification is GNU, found in:
+        /home/chris/Desktop/AOS_project/build/CMakeFiles/3.28.3/CompilerIdC/a.out
+      
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/usr/share/cmake-3.28/Modules/CMakeDetermineCompilerABI.cmake:57 (try_compile)"
+      - "/usr/share/cmake-3.28/Modules/CMakeTestCCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
+      - "tools/seL4/cmake-tool/base.cmake:16 (enable_language)"
+      - "tools/seL4/cmake-tool/all.cmake:13 (include)"
+      - "CMakeLists.txt:18 (include)"
+    checks:
+      - "Detecting C compiler ABI info"
+    directories:
+      source: "/home/chris/Desktop/AOS_project/build/CMakeFiles/CMakeScratch/TryCompile-oXHXP0"
+      binary: "/home/chris/Desktop/AOS_project/build/CMakeFiles/CMakeScratch/TryCompile-oXHXP0"
+    cmakeVariables:
+      CMAKE_C_FLAGS: "-DCONFIG_ARM_TLS_REG_TPIDRU=1"
+      CMAKE_C_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_MODULE_PATH: "/home/chris/Desktop/AOS_project/tools/seL4/cmake-tool/helpers/;/home/chris/Desktop/AOS_project/projects/musllibc"
+      CMAKE_SYSROOT: "/home/chris/Desktop/AOS_project/build"
+      CROSS_COMPILER_PREFIX: "aarch64-linux-gnu-"
+    buildResult:
+      variable: "CMAKE_C_ABI_COMPILED"
+      cached: true
+      stdout: |
+        Change Dir: '/home/chris/Desktop/AOS_project/build/CMakeFiles/CMakeScratch/TryCompile-oXHXP0'
+        
+        Run Build Command(s): /usr/bin/ninja -v cmTC_309d7
+        [1/2] /usr/bin/ccache /usr/bin/aarch64-linux-gnu-gcc --sysroot=/home/chris/Desktop/AOS_project/build/CMakeFiles/CMakeScratch/TryCompile-oXHXP0   -DCONFIG_ARM_TLS_REG_TPIDRU=1    -v -o CMakeFiles/cmTC_309d7.dir/CMakeCCompilerABI.c.obj -c /usr/share/cmake-3.28/Modules/CMakeCCompilerABI.c
+        Using built-in specs.
+        COLLECT_GCC=/usr/bin/aarch64-linux-gnu-gcc
+        Target: aarch64-linux-gnu
+        Configured with: ../src/configure -v --with-pkgversion='Ubuntu 11.4.0-9ubuntu1' --with-bugurl=file:///usr/share/doc/gcc-11/README.Bugs --enable-languages=c,ada,c++,go,d,fortran,objc,obj-c++,m2 --prefix=/usr --with-gcc-major-version-only --program-suffix=-11 --enable-shared --enable-linker-build-id --libexecdir=/usr/lib --without-included-gettext --enable-threads=posix --libdir=/usr/lib --enable-nls --with-sysroot=/ --enable-clocale=gnu --enable-libstdcxx-debug --enable-libstdcxx-time=yes --with-default-libstdcxx-abi=new --enable-gnu-unique-object --disable-libquadmath --disable-libquadmath-support --enable-plugin --enable-default-pie --with-system-zlib --enable-libphobos-checking=release --without-target-system-zlib --enable-multiarch --enable-fix-cortex-a53-843419 --disable-werror --enable-checking=release --build=x86_64-linux-gnu --host=x86_64-linux-gnu --target=aarch64-linux-gnu --program-prefix=aarch64-linux-gnu- --includedir=/usr/aarch64-linux-gnu/include --with-build-config=bootstrap-lto-lean --enable-link-serialization=2
+        Thread model: posix
+        Supported LTO compression algorithms: zlib zstd
+        gcc version 11.4.0 (Ubuntu 11.4.0-9ubuntu1) 
+        COLLECT_GCC_OPTIONS='-fdiagnostics-color=always' '-v' '-D' 'CONFIG_ARM_TLS_REG_TPIDRU=1' '-c' '-o' 'CMakeFiles/cmTC_309d7.dir/CMakeCCompilerABI.c.obj' '-mlittle-endian' '-mabi=lp64' '-dumpdir' 'CMakeFiles/cmTC_309d7.dir/'
+         /usr/lib/gcc-cross/aarch64-linux-gnu/11/cc1 -quiet -v -imultiarch aarch64-linux-gnu -isysroot /home/chris/Desktop/AOS_project/build/CMakeFiles/CMakeScratch/TryCompile-oXHXP0 -D CONFIG_ARM_TLS_REG_TPIDRU=1 /usr/share/cmake-3.28/Modules/CMakeCCompilerABI.c -quiet -dumpdir CMakeFiles/cmTC_309d7.dir/ -dumpbase CMakeCCompilerABI.c.c -dumpbase-ext .c -mlittle-endian -mabi=lp64 -version -fdiagnostics-color=always -fasynchronous-unwind-tables -fstack-protector-strong -Wformat -Wformat-security -fstack-clash-protection -o /tmp/ccKje4X0.s
+        GNU C17 (Ubuntu 11.4.0-9ubuntu1) version 11.4.0 (aarch64-linux-gnu)
+        	compiled by GNU C version 11.4.0, GMP version 6.3.0, MPFR version 4.2.1, MPC version 1.3.1, isl version isl-0.26-GMP
+        
+        GGC heuristics: --param ggc-min-expand=100 --param ggc-min-heapsize=131072
+        ignoring nonexistent directory "/home/chris/Desktop/AOS_project/build/CMakeFiles/CMakeScratch/TryCompile-oXHXP0/usr/local/include/aarch64-linux-gnu"
+        ignoring nonexistent directory "/usr/lib/gcc-cross/aarch64-linux-gnu/11/include-fixed"
+        ignoring nonexistent directory "/home/chris/Desktop/AOS_project/build/CMakeFiles/CMakeScratch/TryCompile-oXHXP0/usr/include/aarch64-linux-gnu"
+        ignoring nonexistent directory "/home/chris/Desktop/AOS_project/build/CMakeFiles/CMakeScratch/TryCompile-oXHXP0/usr/include"
+        #include "..." search starts here:
+        #include <...> search starts here:
+         /usr/lib/gcc-cross/aarch64-linux-gnu/11/include
+         /usr/lib/gcc-cross/aarch64-linux-gnu/11/../../../../aarch64-linux-gnu/include
+        End of search list.
+        GNU C17 (Ubuntu 11.4.0-9ubuntu1) version 11.4.0 (aarch64-linux-gnu)
+        	compiled by GNU C version 11.4.0, GMP version 6.3.0, MPFR version 4.2.1, MPC version 1.3.1, isl version isl-0.26-GMP
+        
+        GGC heuristics: --param ggc-min-expand=100 --param ggc-min-heapsize=131072
+        Compiler executable checksum: e3f86c46370880bec59f649bebf84a75
+        COLLECT_GCC_OPTIONS='-fdiagnostics-color=always' '-v' '-D' 'CONFIG_ARM_TLS_REG_TPIDRU=1' '-c' '-o' 'CMakeFiles/cmTC_309d7.dir/CMakeCCompilerABI.c.obj' '-mlittle-endian' '-mabi=lp64' '-dumpdir' 'CMakeFiles/cmTC_309d7.dir/'
+         /usr/lib/gcc-cross/aarch64-linux-gnu/11/../../../../aarch64-linux-gnu/bin/as -v -EL -mabi=lp64 -o CMakeFiles/cmTC_309d7.dir/CMakeCCompilerABI.c.obj /tmp/ccKje4X0.s
+        GNU assembler version 2.42 (aarch64-linux-gnu) using BFD version (GNU Binutils for Ubuntu) 2.42
+        COMPILER_PATH=/usr/lib/gcc-cross/aarch64-linux-gnu/11/:/usr/lib/gcc-cross/aarch64-linux-gnu/11/:/usr/lib/gcc-cross/aarch64-linux-gnu/:/usr/lib/gcc-cross/aarch64-linux-gnu/11/:/usr/lib/gcc-cross/aarch64-linux-gnu/:/usr/lib/gcc-cross/aarch64-linux-gnu/11/../../../../aarch64-linux-gnu/bin/
+        LIBRARY_PATH=/usr/lib/gcc-cross/aarch64-linux-gnu/11/:/usr/lib/gcc-cross/aarch64-linux-gnu/11/../../../../aarch64-linux-gnu/lib/../lib/:/usr/lib/gcc-cross/aarch64-linux-gnu/11/../../../../aarch64-linux-gnu/lib/
+        COLLECT_GCC_OPTIONS='-fdiagnostics-color=always' '-v' '-D' 'CONFIG_ARM_TLS_REG_TPIDRU=1' '-c' '-o' 'CMakeFiles/cmTC_309d7.dir/CMakeCCompilerABI.c.obj' '-mlittle-endian' '-mabi=lp64' '-dumpdir' 'CMakeFiles/cmTC_309d7.dir/CMakeCCompilerABI.c.'
+        [2/2] : && /usr/bin/ccache /usr/bin/cmake -E rm -f libcmTC_309d7.a && /usr/bin/ccache /usr/bin/aarch64-linux-gnu-ar qc libcmTC_309d7.a  CMakeFiles/cmTC_309d7.dir/CMakeCCompilerABI.c.obj && /usr/bin/ccache /usr/bin/aarch64-linux-gnu-ranlib libcmTC_309d7.a && :
+        
+      exitCode: 0
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/usr/share/cmake-3.28/Modules/CMakeDetermineCompilerABI.cmake:127 (message)"
+      - "/usr/share/cmake-3.28/Modules/CMakeTestCCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
+      - "tools/seL4/cmake-tool/base.cmake:16 (enable_language)"
+      - "tools/seL4/cmake-tool/all.cmake:13 (include)"
+      - "CMakeLists.txt:18 (include)"
+    message: |
+      Parsed C implicit include dir info: rv=done
+        found start of include info
+        found start of implicit include info
+          add: [/usr/lib/gcc-cross/aarch64-linux-gnu/11/include]
+          add: [/usr/lib/gcc-cross/aarch64-linux-gnu/11/../../../../aarch64-linux-gnu/include]
+        end of search list found
+        collapse include dir [/usr/lib/gcc-cross/aarch64-linux-gnu/11/include] ==> [/usr/lib/gcc-cross/aarch64-linux-gnu/11/include]
+        collapse include dir [/usr/lib/gcc-cross/aarch64-linux-gnu/11/../../../../aarch64-linux-gnu/include] ==> [/usr/aarch64-linux-gnu/include]
+        implicit include dirs: [/usr/lib/gcc-cross/aarch64-linux-gnu/11/include;/usr/aarch64-linux-gnu/include]
+      
+      
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/usr/share/cmake-3.28/Modules/CMakeDetermineCompilerABI.cmake:159 (message)"
+      - "/usr/share/cmake-3.28/Modules/CMakeTestCCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
+      - "tools/seL4/cmake-tool/base.cmake:16 (enable_language)"
+      - "tools/seL4/cmake-tool/all.cmake:13 (include)"
+      - "CMakeLists.txt:18 (include)"
+    message: |
+      Parsed C implicit link information:
+        link line regex: [^( *|.*[/\\])(aarch64-linux-gnu-ld|CMAKE_LINK_STARTFILE-NOTFOUND|([^/\\]+-)?ld|collect2)[^/\\]*( |$)]
+        ignore line: [Change Dir: '/home/chris/Desktop/AOS_project/build/CMakeFiles/CMakeScratch/TryCompile-oXHXP0']
+        ignore line: []
+        ignore line: [Run Build Command(s): /usr/bin/ninja -v cmTC_309d7]
+        ignore line: [[1/2] /usr/bin/ccache /usr/bin/aarch64-linux-gnu-gcc --sysroot=/home/chris/Desktop/AOS_project/build/CMakeFiles/CMakeScratch/TryCompile-oXHXP0   -DCONFIG_ARM_TLS_REG_TPIDRU=1    -v -o CMakeFiles/cmTC_309d7.dir/CMakeCCompilerABI.c.obj -c /usr/share/cmake-3.28/Modules/CMakeCCompilerABI.c]
+        ignore line: [Using built-in specs.]
+        ignore line: [COLLECT_GCC=/usr/bin/aarch64-linux-gnu-gcc]
+        ignore line: [Target: aarch64-linux-gnu]
+        ignore line: [Configured with: ../src/configure -v --with-pkgversion='Ubuntu 11.4.0-9ubuntu1' --with-bugurl=file:///usr/share/doc/gcc-11/README.Bugs --enable-languages=c ada c++ go d fortran objc obj-c++ m2 --prefix=/usr --with-gcc-major-version-only --program-suffix=-11 --enable-shared --enable-linker-build-id --libexecdir=/usr/lib --without-included-gettext --enable-threads=posix --libdir=/usr/lib --enable-nls --with-sysroot=/ --enable-clocale=gnu --enable-libstdcxx-debug --enable-libstdcxx-time=yes --with-default-libstdcxx-abi=new --enable-gnu-unique-object --disable-libquadmath --disable-libquadmath-support --enable-plugin --enable-default-pie --with-system-zlib --enable-libphobos-checking=release --without-target-system-zlib --enable-multiarch --enable-fix-cortex-a53-843419 --disable-werror --enable-checking=release --build=x86_64-linux-gnu --host=x86_64-linux-gnu --target=aarch64-linux-gnu --program-prefix=aarch64-linux-gnu- --includedir=/usr/aarch64-linux-gnu/include --with-build-config=bootstrap-lto-lean --enable-link-serialization=2]
+        ignore line: [Thread model: posix]
+        ignore line: [Supported LTO compression algorithms: zlib zstd]
+        ignore line: [gcc version 11.4.0 (Ubuntu 11.4.0-9ubuntu1) ]
+        ignore line: [COLLECT_GCC_OPTIONS='-fdiagnostics-color=always' '-v' '-D' 'CONFIG_ARM_TLS_REG_TPIDRU=1' '-c' '-o' 'CMakeFiles/cmTC_309d7.dir/CMakeCCompilerABI.c.obj' '-mlittle-endian' '-mabi=lp64' '-dumpdir' 'CMakeFiles/cmTC_309d7.dir/']
+        ignore line: [ /usr/lib/gcc-cross/aarch64-linux-gnu/11/cc1 -quiet -v -imultiarch aarch64-linux-gnu -isysroot /home/chris/Desktop/AOS_project/build/CMakeFiles/CMakeScratch/TryCompile-oXHXP0 -D CONFIG_ARM_TLS_REG_TPIDRU=1 /usr/share/cmake-3.28/Modules/CMakeCCompilerABI.c -quiet -dumpdir CMakeFiles/cmTC_309d7.dir/ -dumpbase CMakeCCompilerABI.c.c -dumpbase-ext .c -mlittle-endian -mabi=lp64 -version -fdiagnostics-color=always -fasynchronous-unwind-tables -fstack-protector-strong -Wformat -Wformat-security -fstack-clash-protection -o /tmp/ccKje4X0.s]
+        ignore line: [GNU C17 (Ubuntu 11.4.0-9ubuntu1) version 11.4.0 (aarch64-linux-gnu)]
+        ignore line: [	compiled by GNU C version 11.4.0  GMP version 6.3.0  MPFR version 4.2.1  MPC version 1.3.1  isl version isl-0.26-GMP]
+        ignore line: []
+        ignore line: [GGC heuristics: --param ggc-min-expand=100 --param ggc-min-heapsize=131072]
+        ignore line: [ignoring nonexistent directory "/home/chris/Desktop/AOS_project/build/CMakeFiles/CMakeScratch/TryCompile-oXHXP0/usr/local/include/aarch64-linux-gnu"]
+        ignore line: [ignoring nonexistent directory "/usr/lib/gcc-cross/aarch64-linux-gnu/11/include-fixed"]
+        ignore line: [ignoring nonexistent directory "/home/chris/Desktop/AOS_project/build/CMakeFiles/CMakeScratch/TryCompile-oXHXP0/usr/include/aarch64-linux-gnu"]
+        ignore line: [ignoring nonexistent directory "/home/chris/Desktop/AOS_project/build/CMakeFiles/CMakeScratch/TryCompile-oXHXP0/usr/include"]
+        ignore line: [#include "..." search starts here:]
+        ignore line: [#include <...> search starts here:]
+        ignore line: [ /usr/lib/gcc-cross/aarch64-linux-gnu/11/include]
+        ignore line: [ /usr/lib/gcc-cross/aarch64-linux-gnu/11/../../../../aarch64-linux-gnu/include]
+        ignore line: [End of search list.]
+        ignore line: [GNU C17 (Ubuntu 11.4.0-9ubuntu1) version 11.4.0 (aarch64-linux-gnu)]
+        ignore line: [	compiled by GNU C version 11.4.0  GMP version 6.3.0  MPFR version 4.2.1  MPC version 1.3.1  isl version isl-0.26-GMP]
+        ignore line: []
+        ignore line: [GGC heuristics: --param ggc-min-expand=100 --param ggc-min-heapsize=131072]
+        ignore line: [Compiler executable checksum: e3f86c46370880bec59f649bebf84a75]
+        ignore line: [COLLECT_GCC_OPTIONS='-fdiagnostics-color=always' '-v' '-D' 'CONFIG_ARM_TLS_REG_TPIDRU=1' '-c' '-o' 'CMakeFiles/cmTC_309d7.dir/CMakeCCompilerABI.c.obj' '-mlittle-endian' '-mabi=lp64' '-dumpdir' 'CMakeFiles/cmTC_309d7.dir/']
+        ignore line: [ /usr/lib/gcc-cross/aarch64-linux-gnu/11/../../../../aarch64-linux-gnu/bin/as -v -EL -mabi=lp64 -o CMakeFiles/cmTC_309d7.dir/CMakeCCompilerABI.c.obj /tmp/ccKje4X0.s]
+        ignore line: [GNU assembler version 2.42 (aarch64-linux-gnu) using BFD version (GNU Binutils for Ubuntu) 2.42]
+        ignore line: [COMPILER_PATH=/usr/lib/gcc-cross/aarch64-linux-gnu/11/:/usr/lib/gcc-cross/aarch64-linux-gnu/11/:/usr/lib/gcc-cross/aarch64-linux-gnu/:/usr/lib/gcc-cross/aarch64-linux-gnu/11/:/usr/lib/gcc-cross/aarch64-linux-gnu/:/usr/lib/gcc-cross/aarch64-linux-gnu/11/../../../../aarch64-linux-gnu/bin/]
+        ignore line: [LIBRARY_PATH=/usr/lib/gcc-cross/aarch64-linux-gnu/11/:/usr/lib/gcc-cross/aarch64-linux-gnu/11/../../../../aarch64-linux-gnu/lib/../lib/:/usr/lib/gcc-cross/aarch64-linux-gnu/11/../../../../aarch64-linux-gnu/lib/]
+        ignore line: [COLLECT_GCC_OPTIONS='-fdiagnostics-color=always' '-v' '-D' 'CONFIG_ARM_TLS_REG_TPIDRU=1' '-c' '-o' 'CMakeFiles/cmTC_309d7.dir/CMakeCCompilerABI.c.obj' '-mlittle-endian' '-mabi=lp64' '-dumpdir' 'CMakeFiles/cmTC_309d7.dir/CMakeCCompilerABI.c.']
+        ignore line: [[2/2] : && /usr/bin/ccache /usr/bin/cmake -E rm -f libcmTC_309d7.a && /usr/bin/ccache /usr/bin/aarch64-linux-gnu-ar qc libcmTC_309d7.a  CMakeFiles/cmTC_309d7.dir/CMakeCCompilerABI.c.obj && /usr/bin/ccache /usr/bin/aarch64-linux-gnu-ranlib libcmTC_309d7.a && :]
+        ignore line: []
+        ignore line: []
+        implicit libs: []
+        implicit objs: []
+        implicit dirs: []
+        implicit fwks: []
+      
+      
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/usr/share/cmake-3.28/Modules/CMakeDetermineCompilerId.cmake:17 (message)"
+      - "/usr/share/cmake-3.28/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
+      - "/usr/share/cmake-3.28/Modules/CMakeDetermineCXXCompiler.cmake:126 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "tools/seL4/cmake-tool/base.cmake:17 (enable_language)"
+      - "tools/seL4/cmake-tool/all.cmake:13 (include)"
+      - "CMakeLists.txt:18 (include)"
+    message: |
+      Compiling the CXX compiler identification source file "CMakeCXXCompilerId.cpp" succeeded.
+      Compiler: /usr/bin/aarch64-linux-gnu-g++ 
+      Build flags: 
+      Id flags:  
+      
+      The output was:
+      0
+      
+      
+      Compilation of the CXX compiler identification source "CMakeCXXCompilerId.cpp" produced "a.out"
+      
+      The CXX compiler identification is GNU, found in:
+        /home/chris/Desktop/AOS_project/build/CMakeFiles/3.28.3/CompilerIdCXX/a.out
+      
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/usr/share/cmake-3.28/Modules/CMakeDetermineCompilerABI.cmake:57 (try_compile)"
+      - "/usr/share/cmake-3.28/Modules/CMakeTestCXXCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
+      - "tools/seL4/cmake-tool/base.cmake:17 (enable_language)"
+      - "tools/seL4/cmake-tool/all.cmake:13 (include)"
+      - "CMakeLists.txt:18 (include)"
+    checks:
+      - "Detecting CXX compiler ABI info"
+    directories:
+      source: "/home/chris/Desktop/AOS_project/build/CMakeFiles/CMakeScratch/TryCompile-8o2UBl"
+      binary: "/home/chris/Desktop/AOS_project/build/CMakeFiles/CMakeScratch/TryCompile-8o2UBl"
+    cmakeVariables:
+      CMAKE_CXX_FLAGS: ""
+      CMAKE_CXX_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_MODULE_PATH: "/home/chris/Desktop/AOS_project/tools/seL4/cmake-tool/helpers/;/home/chris/Desktop/AOS_project/projects/musllibc"
+      CMAKE_SYSROOT: "/home/chris/Desktop/AOS_project/build"
+      CROSS_COMPILER_PREFIX: "aarch64-linux-gnu-"
+    buildResult:
+      variable: "CMAKE_CXX_ABI_COMPILED"
+      cached: true
+      stdout: |
+        Change Dir: '/home/chris/Desktop/AOS_project/build/CMakeFiles/CMakeScratch/TryCompile-8o2UBl'
+        
+        Run Build Command(s): /usr/bin/ninja -v cmTC_6c28f
+        [1/2] /usr/bin/ccache /usr/bin/aarch64-linux-gnu-g++ --sysroot=/home/chris/Desktop/AOS_project/build/CMakeFiles/CMakeScratch/TryCompile-8o2UBl   -v -o CMakeFiles/cmTC_6c28f.dir/CMakeCXXCompilerABI.cpp.obj -c /usr/share/cmake-3.28/Modules/CMakeCXXCompilerABI.cpp
+        Using built-in specs.
+        COLLECT_GCC=/usr/bin/aarch64-linux-gnu-g++
+        Target: aarch64-linux-gnu
+        Configured with: ../src/configure -v --with-pkgversion='Ubuntu 11.4.0-9ubuntu1' --with-bugurl=file:///usr/share/doc/gcc-11/README.Bugs --enable-languages=c,ada,c++,go,d,fortran,objc,obj-c++,m2 --prefix=/usr --with-gcc-major-version-only --program-suffix=-11 --enable-shared --enable-linker-build-id --libexecdir=/usr/lib --without-included-gettext --enable-threads=posix --libdir=/usr/lib --enable-nls --with-sysroot=/ --enable-clocale=gnu --enable-libstdcxx-debug --enable-libstdcxx-time=yes --with-default-libstdcxx-abi=new --enable-gnu-unique-object --disable-libquadmath --disable-libquadmath-support --enable-plugin --enable-default-pie --with-system-zlib --enable-libphobos-checking=release --without-target-system-zlib --enable-multiarch --enable-fix-cortex-a53-843419 --disable-werror --enable-checking=release --build=x86_64-linux-gnu --host=x86_64-linux-gnu --target=aarch64-linux-gnu --program-prefix=aarch64-linux-gnu- --includedir=/usr/aarch64-linux-gnu/include --with-build-config=bootstrap-lto-lean --enable-link-serialization=2
+        Thread model: posix
+        Supported LTO compression algorithms: zlib zstd
+        gcc version 11.4.0 (Ubuntu 11.4.0-9ubuntu1) 
+        COLLECT_GCC_OPTIONS='-fdiagnostics-color=always' '-v' '-c' '-o' 'CMakeFiles/cmTC_6c28f.dir/CMakeCXXCompilerABI.cpp.obj' '-shared-libgcc' '-mlittle-endian' '-mabi=lp64' '-dumpdir' 'CMakeFiles/cmTC_6c28f.dir/'
+         /usr/lib/gcc-cross/aarch64-linux-gnu/11/cc1plus -quiet -v -imultiarch aarch64-linux-gnu -isysroot /home/chris/Desktop/AOS_project/build/CMakeFiles/CMakeScratch/TryCompile-8o2UBl -D_GNU_SOURCE /usr/share/cmake-3.28/Modules/CMakeCXXCompilerABI.cpp -quiet -dumpdir CMakeFiles/cmTC_6c28f.dir/ -dumpbase CMakeCXXCompilerABI.cpp.cpp -dumpbase-ext .cpp -mlittle-endian -mabi=lp64 -version -fdiagnostics-color=always -fasynchronous-unwind-tables -fstack-protector-strong -Wformat -Wformat-security -fstack-clash-protection -o /tmp/ccggBTQZ.s
+        GNU C++17 (Ubuntu 11.4.0-9ubuntu1) version 11.4.0 (aarch64-linux-gnu)
+        	compiled by GNU C version 11.4.0, GMP version 6.3.0, MPFR version 4.2.1, MPC version 1.3.1, isl version isl-0.26-GMP
+        
+        GGC heuristics: --param ggc-min-expand=100 --param ggc-min-heapsize=131072
+        ignoring nonexistent directory "/home/chris/Desktop/AOS_project/build/CMakeFiles/CMakeScratch/TryCompile-8o2UBl/usr/local/include/aarch64-linux-gnu"
+        ignoring nonexistent directory "/usr/lib/gcc-cross/aarch64-linux-gnu/11/include-fixed"
+        ignoring nonexistent directory "/home/chris/Desktop/AOS_project/build/CMakeFiles/CMakeScratch/TryCompile-8o2UBl/usr/include/aarch64-linux-gnu"
+        ignoring nonexistent directory "/home/chris/Desktop/AOS_project/build/CMakeFiles/CMakeScratch/TryCompile-8o2UBl/usr/include"
+        #include "..." search starts here:
+        #include <...> search starts here:
+         /usr/lib/gcc-cross/aarch64-linux-gnu/11/../../../../aarch64-linux-gnu/include/c++/11
+         /usr/lib/gcc-cross/aarch64-linux-gnu/11/../../../../aarch64-linux-gnu/include/c++/11/aarch64-linux-gnu
+         /usr/lib/gcc-cross/aarch64-linux-gnu/11/../../../../aarch64-linux-gnu/include/c++/11/backward
+         /usr/lib/gcc-cross/aarch64-linux-gnu/11/include
+         /usr/lib/gcc-cross/aarch64-linux-gnu/11/../../../../aarch64-linux-gnu/include
+        End of search list.
+        GNU C++17 (Ubuntu 11.4.0-9ubuntu1) version 11.4.0 (aarch64-linux-gnu)
+        	compiled by GNU C version 11.4.0, GMP version 6.3.0, MPFR version 4.2.1, MPC version 1.3.1, isl version isl-0.26-GMP
+        
+        GGC heuristics: --param ggc-min-expand=100 --param ggc-min-heapsize=131072
+        Compiler executable checksum: 6f61bae3c968d9370093aedad7bbcc7e
+        COLLECT_GCC_OPTIONS='-fdiagnostics-color=always' '-v' '-c' '-o' 'CMakeFiles/cmTC_6c28f.dir/CMakeCXXCompilerABI.cpp.obj' '-shared-libgcc' '-mlittle-endian' '-mabi=lp64' '-dumpdir' 'CMakeFiles/cmTC_6c28f.dir/'
+         /usr/lib/gcc-cross/aarch64-linux-gnu/11/../../../../aarch64-linux-gnu/bin/as -v -EL -mabi=lp64 -o CMakeFiles/cmTC_6c28f.dir/CMakeCXXCompilerABI.cpp.obj /tmp/ccggBTQZ.s
+        GNU assembler version 2.42 (aarch64-linux-gnu) using BFD version (GNU Binutils for Ubuntu) 2.42
+        COMPILER_PATH=/usr/lib/gcc-cross/aarch64-linux-gnu/11/:/usr/lib/gcc-cross/aarch64-linux-gnu/11/:/usr/lib/gcc-cross/aarch64-linux-gnu/:/usr/lib/gcc-cross/aarch64-linux-gnu/11/:/usr/lib/gcc-cross/aarch64-linux-gnu/:/usr/lib/gcc-cross/aarch64-linux-gnu/11/../../../../aarch64-linux-gnu/bin/
+        LIBRARY_PATH=/usr/lib/gcc-cross/aarch64-linux-gnu/11/:/usr/lib/gcc-cross/aarch64-linux-gnu/11/../../../../aarch64-linux-gnu/lib/../lib/:/usr/lib/gcc-cross/aarch64-linux-gnu/11/../../../../aarch64-linux-gnu/lib/
+        COLLECT_GCC_OPTIONS='-fdiagnostics-color=always' '-v' '-c' '-o' 'CMakeFiles/cmTC_6c28f.dir/CMakeCXXCompilerABI.cpp.obj' '-shared-libgcc' '-mlittle-endian' '-mabi=lp64' '-dumpdir' 'CMakeFiles/cmTC_6c28f.dir/CMakeCXXCompilerABI.cpp.'
+        [2/2] : && /usr/bin/ccache /usr/bin/cmake -E rm -f libcmTC_6c28f.a && /usr/bin/ccache /usr/bin/aarch64-linux-gnu-ar qc libcmTC_6c28f.a  CMakeFiles/cmTC_6c28f.dir/CMakeCXXCompilerABI.cpp.obj && /usr/bin/ccache /usr/bin/aarch64-linux-gnu-ranlib libcmTC_6c28f.a && :
+        
+      exitCode: 0
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/usr/share/cmake-3.28/Modules/CMakeDetermineCompilerABI.cmake:127 (message)"
+      - "/usr/share/cmake-3.28/Modules/CMakeTestCXXCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
+      - "tools/seL4/cmake-tool/base.cmake:17 (enable_language)"
+      - "tools/seL4/cmake-tool/all.cmake:13 (include)"
+      - "CMakeLists.txt:18 (include)"
+    message: |
+      Parsed CXX implicit include dir info: rv=done
+        found start of include info
+        found start of implicit include info
+          add: [/usr/lib/gcc-cross/aarch64-linux-gnu/11/../../../../aarch64-linux-gnu/include/c++/11]
+          add: [/usr/lib/gcc-cross/aarch64-linux-gnu/11/../../../../aarch64-linux-gnu/include/c++/11/aarch64-linux-gnu]
+          add: [/usr/lib/gcc-cross/aarch64-linux-gnu/11/../../../../aarch64-linux-gnu/include/c++/11/backward]
+          add: [/usr/lib/gcc-cross/aarch64-linux-gnu/11/include]
+          add: [/usr/lib/gcc-cross/aarch64-linux-gnu/11/../../../../aarch64-linux-gnu/include]
+        end of search list found
+        collapse include dir [/usr/lib/gcc-cross/aarch64-linux-gnu/11/../../../../aarch64-linux-gnu/include/c++/11] ==> [/usr/aarch64-linux-gnu/include/c++/11]
+        collapse include dir [/usr/lib/gcc-cross/aarch64-linux-gnu/11/../../../../aarch64-linux-gnu/include/c++/11/aarch64-linux-gnu] ==> [/usr/aarch64-linux-gnu/include/c++/11/aarch64-linux-gnu]
+        collapse include dir [/usr/lib/gcc-cross/aarch64-linux-gnu/11/../../../../aarch64-linux-gnu/include/c++/11/backward] ==> [/usr/aarch64-linux-gnu/include/c++/11/backward]
+        collapse include dir [/usr/lib/gcc-cross/aarch64-linux-gnu/11/include] ==> [/usr/lib/gcc-cross/aarch64-linux-gnu/11/include]
+        collapse include dir [/usr/lib/gcc-cross/aarch64-linux-gnu/11/../../../../aarch64-linux-gnu/include] ==> [/usr/aarch64-linux-gnu/include]
+        implicit include dirs: [/usr/aarch64-linux-gnu/include/c++/11;/usr/aarch64-linux-gnu/include/c++/11/aarch64-linux-gnu;/usr/aarch64-linux-gnu/include/c++/11/backward;/usr/lib/gcc-cross/aarch64-linux-gnu/11/include;/usr/aarch64-linux-gnu/include]
+      
+      
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/usr/share/cmake-3.28/Modules/CMakeDetermineCompilerABI.cmake:159 (message)"
+      - "/usr/share/cmake-3.28/Modules/CMakeTestCXXCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
+      - "tools/seL4/cmake-tool/base.cmake:17 (enable_language)"
+      - "tools/seL4/cmake-tool/all.cmake:13 (include)"
+      - "CMakeLists.txt:18 (include)"
+    message: |
+      Parsed CXX implicit link information:
+        link line regex: [^( *|.*[/\\])(aarch64-linux-gnu-ld|CMAKE_LINK_STARTFILE-NOTFOUND|([^/\\]+-)?ld|collect2)[^/\\]*( |$)]
+        ignore line: [Change Dir: '/home/chris/Desktop/AOS_project/build/CMakeFiles/CMakeScratch/TryCompile-8o2UBl']
+        ignore line: []
+        ignore line: [Run Build Command(s): /usr/bin/ninja -v cmTC_6c28f]
+        ignore line: [[1/2] /usr/bin/ccache /usr/bin/aarch64-linux-gnu-g++ --sysroot=/home/chris/Desktop/AOS_project/build/CMakeFiles/CMakeScratch/TryCompile-8o2UBl   -v -o CMakeFiles/cmTC_6c28f.dir/CMakeCXXCompilerABI.cpp.obj -c /usr/share/cmake-3.28/Modules/CMakeCXXCompilerABI.cpp]
+        ignore line: [Using built-in specs.]
+        ignore line: [COLLECT_GCC=/usr/bin/aarch64-linux-gnu-g++]
+        ignore line: [Target: aarch64-linux-gnu]
+        ignore line: [Configured with: ../src/configure -v --with-pkgversion='Ubuntu 11.4.0-9ubuntu1' --with-bugurl=file:///usr/share/doc/gcc-11/README.Bugs --enable-languages=c ada c++ go d fortran objc obj-c++ m2 --prefix=/usr --with-gcc-major-version-only --program-suffix=-11 --enable-shared --enable-linker-build-id --libexecdir=/usr/lib --without-included-gettext --enable-threads=posix --libdir=/usr/lib --enable-nls --with-sysroot=/ --enable-clocale=gnu --enable-libstdcxx-debug --enable-libstdcxx-time=yes --with-default-libstdcxx-abi=new --enable-gnu-unique-object --disable-libquadmath --disable-libquadmath-support --enable-plugin --enable-default-pie --with-system-zlib --enable-libphobos-checking=release --without-target-system-zlib --enable-multiarch --enable-fix-cortex-a53-843419 --disable-werror --enable-checking=release --build=x86_64-linux-gnu --host=x86_64-linux-gnu --target=aarch64-linux-gnu --program-prefix=aarch64-linux-gnu- --includedir=/usr/aarch64-linux-gnu/include --with-build-config=bootstrap-lto-lean --enable-link-serialization=2]
+        ignore line: [Thread model: posix]
+        ignore line: [Supported LTO compression algorithms: zlib zstd]
+        ignore line: [gcc version 11.4.0 (Ubuntu 11.4.0-9ubuntu1) ]
+        ignore line: [COLLECT_GCC_OPTIONS='-fdiagnostics-color=always' '-v' '-c' '-o' 'CMakeFiles/cmTC_6c28f.dir/CMakeCXXCompilerABI.cpp.obj' '-shared-libgcc' '-mlittle-endian' '-mabi=lp64' '-dumpdir' 'CMakeFiles/cmTC_6c28f.dir/']
+        ignore line: [ /usr/lib/gcc-cross/aarch64-linux-gnu/11/cc1plus -quiet -v -imultiarch aarch64-linux-gnu -isysroot /home/chris/Desktop/AOS_project/build/CMakeFiles/CMakeScratch/TryCompile-8o2UBl -D_GNU_SOURCE /usr/share/cmake-3.28/Modules/CMakeCXXCompilerABI.cpp -quiet -dumpdir CMakeFiles/cmTC_6c28f.dir/ -dumpbase CMakeCXXCompilerABI.cpp.cpp -dumpbase-ext .cpp -mlittle-endian -mabi=lp64 -version -fdiagnostics-color=always -fasynchronous-unwind-tables -fstack-protector-strong -Wformat -Wformat-security -fstack-clash-protection -o /tmp/ccggBTQZ.s]
+        ignore line: [GNU C++17 (Ubuntu 11.4.0-9ubuntu1) version 11.4.0 (aarch64-linux-gnu)]
+        ignore line: [	compiled by GNU C version 11.4.0  GMP version 6.3.0  MPFR version 4.2.1  MPC version 1.3.1  isl version isl-0.26-GMP]
+        ignore line: []
+        ignore line: [GGC heuristics: --param ggc-min-expand=100 --param ggc-min-heapsize=131072]
+        ignore line: [ignoring nonexistent directory "/home/chris/Desktop/AOS_project/build/CMakeFiles/CMakeScratch/TryCompile-8o2UBl/usr/local/include/aarch64-linux-gnu"]
+        ignore line: [ignoring nonexistent directory "/usr/lib/gcc-cross/aarch64-linux-gnu/11/include-fixed"]
+        ignore line: [ignoring nonexistent directory "/home/chris/Desktop/AOS_project/build/CMakeFiles/CMakeScratch/TryCompile-8o2UBl/usr/include/aarch64-linux-gnu"]
+        ignore line: [ignoring nonexistent directory "/home/chris/Desktop/AOS_project/build/CMakeFiles/CMakeScratch/TryCompile-8o2UBl/usr/include"]
+        ignore line: [#include "..." search starts here:]
+        ignore line: [#include <...> search starts here:]
+        ignore line: [ /usr/lib/gcc-cross/aarch64-linux-gnu/11/../../../../aarch64-linux-gnu/include/c++/11]
+        ignore line: [ /usr/lib/gcc-cross/aarch64-linux-gnu/11/../../../../aarch64-linux-gnu/include/c++/11/aarch64-linux-gnu]
+        ignore line: [ /usr/lib/gcc-cross/aarch64-linux-gnu/11/../../../../aarch64-linux-gnu/include/c++/11/backward]
+        ignore line: [ /usr/lib/gcc-cross/aarch64-linux-gnu/11/include]
+        ignore line: [ /usr/lib/gcc-cross/aarch64-linux-gnu/11/../../../../aarch64-linux-gnu/include]
+        ignore line: [End of search list.]
+        ignore line: [GNU C++17 (Ubuntu 11.4.0-9ubuntu1) version 11.4.0 (aarch64-linux-gnu)]
+        ignore line: [	compiled by GNU C version 11.4.0  GMP version 6.3.0  MPFR version 4.2.1  MPC version 1.3.1  isl version isl-0.26-GMP]
+        ignore line: []
+        ignore line: [GGC heuristics: --param ggc-min-expand=100 --param ggc-min-heapsize=131072]
+        ignore line: [Compiler executable checksum: 6f61bae3c968d9370093aedad7bbcc7e]
+        ignore line: [COLLECT_GCC_OPTIONS='-fdiagnostics-color=always' '-v' '-c' '-o' 'CMakeFiles/cmTC_6c28f.dir/CMakeCXXCompilerABI.cpp.obj' '-shared-libgcc' '-mlittle-endian' '-mabi=lp64' '-dumpdir' 'CMakeFiles/cmTC_6c28f.dir/']
+        ignore line: [ /usr/lib/gcc-cross/aarch64-linux-gnu/11/../../../../aarch64-linux-gnu/bin/as -v -EL -mabi=lp64 -o CMakeFiles/cmTC_6c28f.dir/CMakeCXXCompilerABI.cpp.obj /tmp/ccggBTQZ.s]
+        ignore line: [GNU assembler version 2.42 (aarch64-linux-gnu) using BFD version (GNU Binutils for Ubuntu) 2.42]
+        ignore line: [COMPILER_PATH=/usr/lib/gcc-cross/aarch64-linux-gnu/11/:/usr/lib/gcc-cross/aarch64-linux-gnu/11/:/usr/lib/gcc-cross/aarch64-linux-gnu/:/usr/lib/gcc-cross/aarch64-linux-gnu/11/:/usr/lib/gcc-cross/aarch64-linux-gnu/:/usr/lib/gcc-cross/aarch64-linux-gnu/11/../../../../aarch64-linux-gnu/bin/]
+        ignore line: [LIBRARY_PATH=/usr/lib/gcc-cross/aarch64-linux-gnu/11/:/usr/lib/gcc-cross/aarch64-linux-gnu/11/../../../../aarch64-linux-gnu/lib/../lib/:/usr/lib/gcc-cross/aarch64-linux-gnu/11/../../../../aarch64-linux-gnu/lib/]
+        ignore line: [COLLECT_GCC_OPTIONS='-fdiagnostics-color=always' '-v' '-c' '-o' 'CMakeFiles/cmTC_6c28f.dir/CMakeCXXCompilerABI.cpp.obj' '-shared-libgcc' '-mlittle-endian' '-mabi=lp64' '-dumpdir' 'CMakeFiles/cmTC_6c28f.dir/CMakeCXXCompilerABI.cpp.']
+        ignore line: [[2/2] : && /usr/bin/ccache /usr/bin/cmake -E rm -f libcmTC_6c28f.a && /usr/bin/ccache /usr/bin/aarch64-linux-gnu-ar qc libcmTC_6c28f.a  CMakeFiles/cmTC_6c28f.dir/CMakeCXXCompilerABI.cpp.obj && /usr/bin/ccache /usr/bin/aarch64-linux-gnu-ranlib libcmTC_6c28f.a && :]
+        ignore line: []
+        ignore line: []
+        implicit libs: []
+        implicit objs: []
+        implicit dirs: []
+        implicit fwks: []
+      
+      
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/usr/share/cmake-3.28/Modules/CMakeDetermineCompilerId.cmake:1131 (message)"
+      - "/usr/share/cmake-3.28/Modules/CMakeDetermineASMCompiler.cmake:131 (CMAKE_DETERMINE_COMPILER_ID_VENDOR)"
+      - "tools/seL4/cmake-tool/base.cmake:18 (enable_language)"
+      - "tools/seL4/cmake-tool/all.cmake:13 (include)"
+      - "CMakeLists.txt:18 (include)"
+    message: |
+      Checking whether the ASM compiler is GNU using "--version" matched "(GNU assembler)|(GCC)|(Free Software Foundation)":
+      aarch64-linux-gnu-gcc (Ubuntu 11.4.0-9ubuntu1) 11.4.0
+      Copyright (C) 2021 Free Software Foundation, Inc.
+      This is free software; see the source for copying conditions.  There is NO
+      warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
+      
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/usr/share/cmake-3.28/Modules/Internal/CheckSourceCompiles.cmake:101 (try_compile)"
+      - "/usr/share/cmake-3.28/Modules/CheckCSourceCompiles.cmake:52 (cmake_check_source_compiles)"
+      - "tools/seL4/cmake-tool/helpers/check_arch_compiler.cmake:95 (check_c_source_compiles)"
+      - "tools/seL4/cmake-tool/helpers/check_arch_compiler.cmake:107 (check_arch_gcc)"
+      - "projects/musllibc/Findmusllibc.cmake:46 (check_arch_compiler)"
+      - "tools/seL4/cmake-tool/base.cmake:65 (musllibc_set_environment_flags)"
+      - "tools/seL4/cmake-tool/all.cmake:13 (include)"
+      - "CMakeLists.txt:18 (include)"
+    checks:
+      - "Performing Test compiler_arch_test"
+    directories:
+      source: "/home/chris/Desktop/AOS_project/build/CMakeFiles/CMakeScratch/TryCompile-PDRc82"
+      binary: "/home/chris/Desktop/AOS_project/build/CMakeFiles/CMakeScratch/TryCompile-PDRc82"
+    cmakeVariables:
+      CMAKE_C_FLAGS: "-DCONFIG_ARM_TLS_REG_TPIDRU=1  -march=armv8-a+crc  -D__KERNEL_64__"
+      CMAKE_C_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: "  -D__KERNEL_64__   -static -nostdlib -z max-page-size=0x1000"
+      CMAKE_MODULE_PATH: "/home/chris/Desktop/AOS_project/tools/seL4/cmake-tool/helpers/;/home/chris/Desktop/AOS_project/projects/musllibc"
+      CMAKE_SYSROOT: "/home/chris/Desktop/AOS_project/build"
+      CROSS_COMPILER_PREFIX: "aarch64-linux-gnu-"
+    buildResult:
+      variable: "compiler_arch_test"
+      cached: true
+      stdout: |
+        Change Dir: '/home/chris/Desktop/AOS_project/build/CMakeFiles/CMakeScratch/TryCompile-PDRc82'
+        
+        Run Build Command(s): /usr/bin/ninja -v cmTC_ad207
+        [1/2] /usr/bin/ccache /usr/bin/aarch64-linux-gnu-gcc --sysroot=/home/chris/Desktop/AOS_project/build/CMakeFiles/CMakeScratch/TryCompile-PDRc82 -Dcompiler_arch_test  -DCONFIG_ARM_TLS_REG_TPIDRU=1  -march=armv8-a+crc  -D__KERNEL_64__  -std=gnu11 -o CMakeFiles/cmTC_ad207.dir/src.c.obj -c /home/chris/Desktop/AOS_project/build/CMakeFiles/CMakeScratch/TryCompile-PDRc82/src.c
+        [2/2] : && /usr/bin/ccache /usr/bin/cmake -E rm -f libcmTC_ad207.a && /usr/bin/ccache /usr/bin/aarch64-linux-gnu-ar qc libcmTC_ad207.a  CMakeFiles/cmTC_ad207.dir/src.c.obj && /usr/bin/ccache /usr/bin/aarch64-linux-gnu-ranlib libcmTC_ad207.a && :
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/usr/share/cmake-3.28/Modules/CheckIncludeFile.cmake:90 (try_compile)"
+      - "libnfs/cmake/ConfigureChecks.cmake:16 (check_include_file)"
+      - "libnfs/CMakeLists.txt:26 (include)"
+    checks:
+      - "Looking for sys/filio.h"
+    directories:
+      source: "/home/chris/Desktop/AOS_project/build/CMakeFiles/CMakeScratch/TryCompile-1wHfc8"
+      binary: "/home/chris/Desktop/AOS_project/build/CMakeFiles/CMakeScratch/TryCompile-1wHfc8"
+    cmakeVariables:
+      CMAKE_C_FLAGS: "-DCONFIG_ARM_TLS_REG_TPIDRU=1  -march=armv8-a+crc  -D__KERNEL_64__"
+      CMAKE_EXE_LINKER_FLAGS: "  -D__KERNEL_64__   -static -nostdlib -z max-page-size=0x1000"
+      CMAKE_MODULE_PATH: "/home/chris/Desktop/AOS_project/tools/seL4/cmake-tool/helpers/;/home/chris/Desktop/AOS_project/projects/musllibc"
+      CMAKE_SYSROOT: "/home/chris/Desktop/AOS_project/build"
+      CROSS_COMPILER_PREFIX: "aarch64-linux-gnu-"
+    buildResult:
+      variable: "HAVE_SYS_FILIO_H"
+      cached: true
+      stdout: |
+        Change Dir: '/home/chris/Desktop/AOS_project/build/CMakeFiles/CMakeScratch/TryCompile-1wHfc8'
+        
+        Run Build Command(s): /usr/bin/ninja -v cmTC_fb6af
+        [1/2] /usr/bin/ccache /usr/bin/aarch64-linux-gnu-gcc --sysroot=/home/chris/Desktop/AOS_project/build/CMakeFiles/CMakeScratch/TryCompile-1wHfc8   -DCONFIG_ARM_TLS_REG_TPIDRU=1  -march=armv8-a+crc  -D__KERNEL_64__ -o CMakeFiles/cmTC_fb6af.dir/CheckIncludeFile.c.obj -c /home/chris/Desktop/AOS_project/build/CMakeFiles/CMakeScratch/TryCompile-1wHfc8/CheckIncludeFile.c
+        FAILED: CMakeFiles/cmTC_fb6af.dir/CheckIncludeFile.c.obj 
+        /usr/bin/ccache /usr/bin/aarch64-linux-gnu-gcc --sysroot=/home/chris/Desktop/AOS_project/build/CMakeFiles/CMakeScratch/TryCompile-1wHfc8   -DCONFIG_ARM_TLS_REG_TPIDRU=1  -march=armv8-a+crc  -D__KERNEL_64__ -o CMakeFiles/cmTC_fb6af.dir/CheckIncludeFile.c.obj -c /home/chris/Desktop/AOS_project/build/CMakeFiles/CMakeScratch/TryCompile-1wHfc8/CheckIncludeFile.c
+        /home/chris/Desktop/AOS_project/build/CMakeFiles/CMakeScratch/TryCompile-1wHfc8/CheckIncludeFile.c:1:10: fatal error: sys/filio.h: No such file or directory
+            1 | #include <sys/filio.h>
+              |          ^~~~~~~~~~~~~
+        compilation terminated.
+        ninja: build stopped: subcommand failed.
+        
+      exitCode: 1
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/usr/share/cmake-3.28/Modules/Internal/CheckSourceCompiles.cmake:101 (try_compile)"
+      - "/usr/share/cmake-3.28/Modules/CheckSourceCompiles.cmake:77 (cmake_check_source_compiles)"
+      - "/usr/share/cmake-3.28/Modules/CheckStructHasMember.cmake:77 (CHECK_SOURCE_COMPILES)"
+      - "libnfs/cmake/ConfigureChecks.cmake:29 (check_struct_has_member)"
+      - "libnfs/CMakeLists.txt:26 (include)"
+    checks:
+      - "Performing Test HAVE_SOCKADDR_LEN"
+    directories:
+      source: "/home/chris/Desktop/AOS_project/build/CMakeFiles/CMakeScratch/TryCompile-IvOWag"
+      binary: "/home/chris/Desktop/AOS_project/build/CMakeFiles/CMakeScratch/TryCompile-IvOWag"
+    cmakeVariables:
+      CMAKE_C_FLAGS: "-DCONFIG_ARM_TLS_REG_TPIDRU=1  -march=armv8-a+crc  -D__KERNEL_64__"
+      CMAKE_C_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: "  -D__KERNEL_64__   -static -nostdlib -z max-page-size=0x1000"
+      CMAKE_MODULE_PATH: "/home/chris/Desktop/AOS_project/tools/seL4/cmake-tool/helpers/;/home/chris/Desktop/AOS_project/projects/musllibc"
+      CMAKE_SYSROOT: "/home/chris/Desktop/AOS_project/build"
+      CROSS_COMPILER_PREFIX: "aarch64-linux-gnu-"
+    buildResult:
+      variable: "HAVE_SOCKADDR_LEN"
+      cached: true
+      stdout: |
+        Change Dir: '/home/chris/Desktop/AOS_project/build/CMakeFiles/CMakeScratch/TryCompile-IvOWag'
+        
+        Run Build Command(s): /usr/bin/ninja -v cmTC_99a65
+        [1/2] /usr/bin/ccache /usr/bin/aarch64-linux-gnu-gcc --sysroot=/home/chris/Desktop/AOS_project/build/CMakeFiles/CMakeScratch/TryCompile-IvOWag -DHAVE_SOCKADDR_LEN  -DCONFIG_ARM_TLS_REG_TPIDRU=1  -march=armv8-a+crc  -D__KERNEL_64__  -std=gnu11 -o CMakeFiles/cmTC_99a65.dir/src.c.obj -c /home/chris/Desktop/AOS_project/build/CMakeFiles/CMakeScratch/TryCompile-IvOWag/src.c
+        FAILED: CMakeFiles/cmTC_99a65.dir/src.c.obj 
+        /usr/bin/ccache /usr/bin/aarch64-linux-gnu-gcc --sysroot=/home/chris/Desktop/AOS_project/build/CMakeFiles/CMakeScratch/TryCompile-IvOWag -DHAVE_SOCKADDR_LEN  -DCONFIG_ARM_TLS_REG_TPIDRU=1  -march=armv8-a+crc  -D__KERNEL_64__  -std=gnu11 -o CMakeFiles/cmTC_99a65.dir/src.c.obj -c /home/chris/Desktop/AOS_project/build/CMakeFiles/CMakeScratch/TryCompile-IvOWag/src.c
+        /home/chris/Desktop/AOS_project/build/CMakeFiles/CMakeScratch/TryCompile-IvOWag/src.c: In function ‘main’:
+        /home/chris/Desktop/AOS_project/build/CMakeFiles/CMakeScratch/TryCompile-IvOWag/src.c:6:38: error: ‘struct sockaddr’ has no member named ‘sa_len’
+            6 |   (void)sizeof(((struct sockaddr *)0)->sa_len);
+              |                                      ^~
+        ninja: build stopped: subcommand failed.
+        
+      exitCode: 1
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/usr/share/cmake-3.28/Modules/Internal/CheckSourceCompiles.cmake:101 (try_compile)"
+      - "/usr/share/cmake-3.28/Modules/CheckCSourceCompiles.cmake:52 (cmake_check_source_compiles)"
+      - "libnfs/cmake/ConfigureChecks.cmake:34 (check_c_source_compiles)"
+      - "libnfs/CMakeLists.txt:26 (include)"
+    checks:
+      - "Performing Test HAVE_SO_BINDTODEVICE"
+    directories:
+      source: "/home/chris/Desktop/AOS_project/build/CMakeFiles/CMakeScratch/TryCompile-2gboRO"
+      binary: "/home/chris/Desktop/AOS_project/build/CMakeFiles/CMakeScratch/TryCompile-2gboRO"
+    cmakeVariables:
+      CMAKE_C_FLAGS: "-DCONFIG_ARM_TLS_REG_TPIDRU=1  -march=armv8-a+crc  -D__KERNEL_64__"
+      CMAKE_C_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: "  -D__KERNEL_64__   -static -nostdlib -z max-page-size=0x1000"
+      CMAKE_MODULE_PATH: "/home/chris/Desktop/AOS_project/tools/seL4/cmake-tool/helpers/;/home/chris/Desktop/AOS_project/projects/musllibc"
+      CMAKE_SYSROOT: "/home/chris/Desktop/AOS_project/build"
+      CROSS_COMPILER_PREFIX: "aarch64-linux-gnu-"
+    buildResult:
+      variable: "HAVE_SO_BINDTODEVICE"
+      cached: true
+      stdout: |
+        Change Dir: '/home/chris/Desktop/AOS_project/build/CMakeFiles/CMakeScratch/TryCompile-2gboRO'
+        
+        Run Build Command(s): /usr/bin/ninja -v cmTC_a88cb
+        [1/2] /usr/bin/ccache /usr/bin/aarch64-linux-gnu-gcc --sysroot=/home/chris/Desktop/AOS_project/build/CMakeFiles/CMakeScratch/TryCompile-2gboRO -DHAVE_SO_BINDTODEVICE  -DCONFIG_ARM_TLS_REG_TPIDRU=1  -march=armv8-a+crc  -D__KERNEL_64__  -std=gnu11 -o CMakeFiles/cmTC_a88cb.dir/src.c.obj -c /home/chris/Desktop/AOS_project/build/CMakeFiles/CMakeScratch/TryCompile-2gboRO/src.c
+        [2/2] : && /usr/bin/ccache /usr/bin/cmake -E rm -f libcmTC_a88cb.a && /usr/bin/ccache /usr/bin/aarch64-linux-gnu-ar qc libcmTC_a88cb.a  CMakeFiles/cmTC_a88cb.dir/src.c.obj && /usr/bin/ccache /usr/bin/aarch64-linux-gnu-ranlib libcmTC_a88cb.a && :
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/usr/share/cmake-3.28/Modules/Internal/CheckSourceCompiles.cmake:101 (try_compile)"
+      - "/usr/share/cmake-3.28/Modules/CheckCSourceCompiles.cmake:52 (cmake_check_source_compiles)"
+      - "libnfs/cmake/ConfigureChecks.cmake:57 (check_c_source_compiles)"
+      - "libnfs/CMakeLists.txt:26 (include)"
+    checks:
+      - "Performing Test NO_LFS_REQUIRED"
+    directories:
+      source: "/home/chris/Desktop/AOS_project/build/CMakeFiles/CMakeScratch/TryCompile-feUl0y"
+      binary: "/home/chris/Desktop/AOS_project/build/CMakeFiles/CMakeScratch/TryCompile-feUl0y"
+    cmakeVariables:
+      CMAKE_C_FLAGS: "-DCONFIG_ARM_TLS_REG_TPIDRU=1  -march=armv8-a+crc  -D__KERNEL_64__"
+      CMAKE_C_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: "  -D__KERNEL_64__   -static -nostdlib -z max-page-size=0x1000"
+      CMAKE_MODULE_PATH: "/home/chris/Desktop/AOS_project/tools/seL4/cmake-tool/helpers/;/home/chris/Desktop/AOS_project/projects/musllibc"
+      CMAKE_SYSROOT: "/home/chris/Desktop/AOS_project/build"
+      CROSS_COMPILER_PREFIX: "aarch64-linux-gnu-"
+    buildResult:
+      variable: "NO_LFS_REQUIRED"
+      cached: true
+      stdout: |
+        Change Dir: '/home/chris/Desktop/AOS_project/build/CMakeFiles/CMakeScratch/TryCompile-feUl0y'
+        
+        Run Build Command(s): /usr/bin/ninja -v cmTC_ad021
+        [1/2] /usr/bin/ccache /usr/bin/aarch64-linux-gnu-gcc --sysroot=/home/chris/Desktop/AOS_project/build/CMakeFiles/CMakeScratch/TryCompile-feUl0y -DNO_LFS_REQUIRED  -DCONFIG_ARM_TLS_REG_TPIDRU=1  -march=armv8-a+crc  -D__KERNEL_64__  -std=gnu11 -o CMakeFiles/cmTC_ad021.dir/src.c.obj -c /home/chris/Desktop/AOS_project/build/CMakeFiles/CMakeScratch/TryCompile-feUl0y/src.c
+        [2/2] : && /usr/bin/ccache /usr/bin/cmake -E rm -f libcmTC_ad021.a && /usr/bin/ccache /usr/bin/aarch64-linux-gnu-ar qc libcmTC_ad021.a  CMakeFiles/cmTC_ad021.dir/src.c.obj && /usr/bin/ccache /usr/bin/aarch64-linux-gnu-ranlib libcmTC_ad021.a && :
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/usr/share/cmake-3.28/Modules/CheckSymbolExists.cmake:140 (try_compile)"
+      - "/usr/share/cmake-3.28/Modules/CheckSymbolExists.cmake:66 (__CHECK_SYMBOL_EXISTS_IMPL)"
+      - "libnfs/cmake/ConfigureChecks.cmake:90 (check_symbol_exists)"
+      - "libnfs/CMakeLists.txt:26 (include)"
+    checks:
+      - "Looking for makedev"
+    directories:
+      source: "/home/chris/Desktop/AOS_project/build/CMakeFiles/CMakeScratch/TryCompile-MURMsR"
+      binary: "/home/chris/Desktop/AOS_project/build/CMakeFiles/CMakeScratch/TryCompile-MURMsR"
+    cmakeVariables:
+      CMAKE_C_FLAGS: "-DCONFIG_ARM_TLS_REG_TPIDRU=1  -march=armv8-a+crc  -D__KERNEL_64__"
+      CMAKE_EXE_LINKER_FLAGS: "  -D__KERNEL_64__   -static -nostdlib -z max-page-size=0x1000"
+      CMAKE_MODULE_PATH: "/home/chris/Desktop/AOS_project/tools/seL4/cmake-tool/helpers/;/home/chris/Desktop/AOS_project/projects/musllibc"
+      CMAKE_SYSROOT: "/home/chris/Desktop/AOS_project/build"
+      CROSS_COMPILER_PREFIX: "aarch64-linux-gnu-"
+    buildResult:
+      variable: "MAJOR_IN_MKDEV"
+      cached: true
+      stdout: |
+        Change Dir: '/home/chris/Desktop/AOS_project/build/CMakeFiles/CMakeScratch/TryCompile-MURMsR'
+        
+        Run Build Command(s): /usr/bin/ninja -v cmTC_92408
+        [1/2] /usr/bin/ccache /usr/bin/aarch64-linux-gnu-gcc --sysroot=/home/chris/Desktop/AOS_project/build/CMakeFiles/CMakeScratch/TryCompile-MURMsR   -DCONFIG_ARM_TLS_REG_TPIDRU=1  -march=armv8-a+crc  -D__KERNEL_64__ -o CMakeFiles/cmTC_92408.dir/CheckSymbolExists.c.obj -c /home/chris/Desktop/AOS_project/build/CMakeFiles/CMakeScratch/TryCompile-MURMsR/CheckSymbolExists.c
+        FAILED: CMakeFiles/cmTC_92408.dir/CheckSymbolExists.c.obj 
+        /usr/bin/ccache /usr/bin/aarch64-linux-gnu-gcc --sysroot=/home/chris/Desktop/AOS_project/build/CMakeFiles/CMakeScratch/TryCompile-MURMsR   -DCONFIG_ARM_TLS_REG_TPIDRU=1  -march=armv8-a+crc  -D__KERNEL_64__ -o CMakeFiles/cmTC_92408.dir/CheckSymbolExists.c.obj -c /home/chris/Desktop/AOS_project/build/CMakeFiles/CMakeScratch/TryCompile-MURMsR/CheckSymbolExists.c
+        /home/chris/Desktop/AOS_project/build/CMakeFiles/CMakeScratch/TryCompile-MURMsR/CheckSymbolExists.c:2:10: fatal error: sys/mkdev.h: No such file or directory
+            2 | #include <sys/mkdev.h>
+              |          ^~~~~~~~~~~~~
+        compilation terminated.
+        ninja: build stopped: subcommand failed.
+        
+      exitCode: 1
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/usr/share/cmake-3.28/Modules/CheckSymbolExists.cmake:140 (try_compile)"
+      - "/usr/share/cmake-3.28/Modules/CheckSymbolExists.cmake:66 (__CHECK_SYMBOL_EXISTS_IMPL)"
+      - "libnfs/cmake/ConfigureChecks.cmake:91 (check_symbol_exists)"
+      - "libnfs/CMakeLists.txt:26 (include)"
+    checks:
+      - "Looking for makedev"
+    directories:
+      source: "/home/chris/Desktop/AOS_project/build/CMakeFiles/CMakeScratch/TryCompile-QkJodK"
+      binary: "/home/chris/Desktop/AOS_project/build/CMakeFiles/CMakeScratch/TryCompile-QkJodK"
+    cmakeVariables:
+      CMAKE_C_FLAGS: "-DCONFIG_ARM_TLS_REG_TPIDRU=1  -march=armv8-a+crc  -D__KERNEL_64__"
+      CMAKE_EXE_LINKER_FLAGS: "  -D__KERNEL_64__   -static -nostdlib -z max-page-size=0x1000"
+      CMAKE_MODULE_PATH: "/home/chris/Desktop/AOS_project/tools/seL4/cmake-tool/helpers/;/home/chris/Desktop/AOS_project/projects/musllibc"
+      CMAKE_SYSROOT: "/home/chris/Desktop/AOS_project/build"
+      CROSS_COMPILER_PREFIX: "aarch64-linux-gnu-"
+    buildResult:
+      variable: "MAJOR_IN_SYSMACROS"
+      cached: true
+      stdout: |
+        Change Dir: '/home/chris/Desktop/AOS_project/build/CMakeFiles/CMakeScratch/TryCompile-QkJodK'
+        
+        Run Build Command(s): /usr/bin/ninja -v cmTC_4cf19
+        [1/2] /usr/bin/ccache /usr/bin/aarch64-linux-gnu-gcc --sysroot=/home/chris/Desktop/AOS_project/build/CMakeFiles/CMakeScratch/TryCompile-QkJodK   -DCONFIG_ARM_TLS_REG_TPIDRU=1  -march=armv8-a+crc  -D__KERNEL_64__ -o CMakeFiles/cmTC_4cf19.dir/CheckSymbolExists.c.obj -c /home/chris/Desktop/AOS_project/build/CMakeFiles/CMakeScratch/TryCompile-QkJodK/CheckSymbolExists.c
+        [2/2] : && /usr/bin/ccache /usr/bin/cmake -E rm -f libcmTC_4cf19.a && /usr/bin/ccache /usr/bin/aarch64-linux-gnu-ar qc libcmTC_4cf19.a  CMakeFiles/cmTC_4cf19.dir/CheckSymbolExists.c.obj && /usr/bin/ccache /usr/bin/aarch64-linux-gnu-ranlib libcmTC_4cf19.a && :
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/usr/share/cmake-3.28/Modules/Internal/CheckSourceCompiles.cmake:101 (try_compile)"
+      - "/usr/share/cmake-3.28/Modules/Internal/CheckCompilerFlag.cmake:18 (cmake_check_source_compiles)"
+      - "/usr/share/cmake-3.28/Modules/CheckCCompilerFlag.cmake:51 (cmake_check_compiler_flag)"
+      - "libnfs/cmake/ConfigureChecks.cmake:95 (check_c_compiler_flag)"
+      - "libnfs/CMakeLists.txt:26 (include)"
+    checks:
+      - "Performing Test C_ACCEPTS_WALL"
+    directories:
+      source: "/home/chris/Desktop/AOS_project/build/CMakeFiles/CMakeScratch/TryCompile-qKmv6w"
+      binary: "/home/chris/Desktop/AOS_project/build/CMakeFiles/CMakeScratch/TryCompile-qKmv6w"
+    cmakeVariables:
+      CMAKE_C_FLAGS: "-DCONFIG_ARM_TLS_REG_TPIDRU=1  -march=armv8-a+crc  -D__KERNEL_64__"
+      CMAKE_C_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: "  -D__KERNEL_64__   -static -nostdlib -z max-page-size=0x1000"
+      CMAKE_MODULE_PATH: "/home/chris/Desktop/AOS_project/tools/seL4/cmake-tool/helpers/;/home/chris/Desktop/AOS_project/projects/musllibc"
+      CMAKE_SYSROOT: "/home/chris/Desktop/AOS_project/build"
+      CROSS_COMPILER_PREFIX: "aarch64-linux-gnu-"
+    buildResult:
+      variable: "C_ACCEPTS_WALL"
+      cached: true
+      stdout: |
+        Change Dir: '/home/chris/Desktop/AOS_project/build/CMakeFiles/CMakeScratch/TryCompile-qKmv6w'
+        
+        Run Build Command(s): /usr/bin/ninja -v cmTC_b7542
+        [1/2] /usr/bin/ccache /usr/bin/aarch64-linux-gnu-gcc --sysroot=/home/chris/Desktop/AOS_project/build/CMakeFiles/CMakeScratch/TryCompile-qKmv6w -DC_ACCEPTS_WALL  -DCONFIG_ARM_TLS_REG_TPIDRU=1  -march=armv8-a+crc  -D__KERNEL_64__  -std=gnu11   -Wall -o CMakeFiles/cmTC_b7542.dir/src.c.obj -c /home/chris/Desktop/AOS_project/build/CMakeFiles/CMakeScratch/TryCompile-qKmv6w/src.c
+        [2/2] : && /usr/bin/ccache /usr/bin/cmake -E rm -f libcmTC_b7542.a && /usr/bin/ccache /usr/bin/aarch64-linux-gnu-ar qc libcmTC_b7542.a  CMakeFiles/cmTC_b7542.dir/src.c.obj && /usr/bin/ccache /usr/bin/aarch64-linux-gnu-ranlib libcmTC_b7542.a && :
+        
+      exitCode: 0
+...

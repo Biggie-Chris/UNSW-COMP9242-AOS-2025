@@ -1,0 +1,1 @@
+regen /home/chris/Desktop/AOS_project/build/kernel/kernel.dtb /home/chris/Desktop/AOS_project/kernel/tools/dts/odroidc2.dts;/home/chris/Desktop/AOS_project/kernel/src/plat/odroidc2/overlay-odroidc2.dts
